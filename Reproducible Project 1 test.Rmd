@@ -89,7 +89,7 @@ median(total_steps) == median(imputed_steps)
 summary(total_steps)
 summary(imputed_steps)
 ```
-###**What is the impact of imputing missing data on the estimates of the total daily number of steps?**
+### **What is the impact of imputing missing data on the estimates of the total daily number of steps?**
 ```{r}
 summary(imputed_steps) - summary(total_steps)
 par(mfrow = c(2, 1))
@@ -110,7 +110,7 @@ dofw <- function(date) {
 }
 filled$daytype <- as.factor(sapply(filled$date, dofw))
 ```
-###**Make a panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days**  
+### **Make a panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days**  
 ```{r}
 par(mfrow = c(2, 1))
 for (type in c("weekend", "weekday")) {
